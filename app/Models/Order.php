@@ -10,8 +10,8 @@ class Order extends Model
     use HasFactory;
     protected $fillable = ['count','date','bond_id'];
 
-    public function bonds()
+    public function bond()
     {
-        return $this->hasOne(Bond::class);
+        return $this->belongsTo(Bond::class);
     }
 }
